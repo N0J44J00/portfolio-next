@@ -31,12 +31,15 @@ export default function Home() {
               <img className="rounded-full w-1/3 mx-auto bg-stone-900 bg-opacity-70" src="/my-face.png" />
             </div>
             <div className="p-5 text-center rounded-lg flex items-center justify-between space-x-8">
-              <h1 className="text-xl font-bold mx-auto text-white">Hello There!</h1>
+              <h1 className="text-4xl font-bold mx-auto text-white">Hello There!</h1>
             </div>
             <div className="p-5 bg-stone-800 bg-opacity-80 rounded-lg flex items-center justify-between space-x-8">
                 <p className="text-md font-bold text-white">
-                  I'm a finnish IT-student, interested in front-end development and lorem ipsum dolor sit amet...
-                  In the neon-drenched cyber-jungle, techno-shamans engage in quantum dance battles against glitched cyber-raptors, all while the zero-gravity internet of things dreams of electric sheep.  
+                  I'm a finnish IT-student, interested in front-end development and lorem ipsum dolor sit amet...<br/>
+                  In the neon-drenched cyber-jungle, techno-shamans engage in quantum dance battles against glitched cyber-raptors, all while the zero-gravity internet of things dreams of electric sheep.<br/><br/>
+                  Bioluminescent cyber-organic entities transcend the blockchain singularity, traversing the synaptic singularity matrix. Quantum-enhanced nano-coffee machines synthesize digital caffeine anomalies, fueling the interdimensional glitchpunk revolution.<br/><br/>
+
+Deep within the code abyss, neon-infused bio-avatars download transcendental subroutines, interfacing with the existential mainframe. Augmented pigeons transmit quantum memes through the neural fog, while cyber-entropy spirals into the hyper-holographic void.  
                 </p>
             </div>
           </div>

@@ -13,7 +13,7 @@ export default function NavHeader() {
 
   //Change menu to sticky on scroll
   useEffect(() => {
-    const SCROLL_POINT_FOR_STICKY_MENU = 400
+    const SCROLL_POINT_FOR_STICKY_MENU = 500
 
     const onScroll = () => {
         var nav = document.getElementById('site-menu');
