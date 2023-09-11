@@ -54,7 +54,7 @@ Deep within the code abyss, neon-infused bio-avatars download transcendental sub
                   In the neon-drenched cyber-jungle, techno-shamans engage in quantum dance battles against glitched cyber-raptors, all while the zero-gravity internet of things dreams of electric sheep.  
                 </p>
               </div> */}
-              <div className="flex flex-col w-2/3 mx-auto pt-10 pb-24 tracking-wide">
+              <div className="flex flex-col w-2/3 mx-auto pb-24 tracking-wide">
                 <h2 className="my-3 text-xl text-white mb-10">The Story so far...</h2>
                 <h3 className="my-3 text-lg text-white">Job Experience A</h3>
                 <p className="my-3 text-stone-400">Glowing neon data conduits flow through the quantum ether, while cybernetic algorithms synergize with holographic quantum fluctuations. Virtual reality hyperloops warp through the ethereal metaverse, where pixelated nanobots decrypt fractal consciousness. 
