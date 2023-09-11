@@ -1,32 +1,11 @@
 import { useEffect, useState } from 'react';
 import Head from 'next/head'
 import {WiMoonAltWaningCrescent4, WiMoonAltWaningGibbous3} from 'react-icons/wi';
+import NavHeader from '../components/index/nav';
 
 export default function Home() {
-  //Menu open/close toggle state
-  const [open, setOpen] = useState(false);
 
 
-  //Change menu to sticky on scroll
-  useEffect(() => {
-    const SCROLL_POINT_FOR_STICKY_MENU = 200
-
-    const onScroll = () => {
-        var nav = document.getElementById('site-menu');
-        var header = document.getElementById('top');
-
-        if (window.scrollY >=SCROLL_POINT_FOR_STICKY_MENU) {
-          nav.classList.add('nav-sticky');
-          header.classList.add('pt-scroll');
-        } else {
-          nav.classList.remove('nav-sticky');
-          header.classList.remove('pt-scroll');
-        }
-    }
-
-    window.addEventListener('scroll', onScroll)
-
-  }, [])
 
   return (
     <div>
@@ -37,35 +16,41 @@ export default function Home() {
       </Head>
 
       <div>
-         <section className="bg-stone-900">
+        <section className="bg-stone-900">
 
         {/* HEADER component */}
-          <header id="top" className="w-full flex flex-col fixed sm:relative bg-white pin-t pin-r pin-l">
-            <nav id="site-menu" className="flex flex-col sm:flex-row w-full justify-between items-center px-4 sm:px-6 py-1 bg-white shadow sm:shadow-none">
-              <div className="w-full sm:w-auto self-start sm:self-center flex flex-row sm:flex-none flex-no-wrap justify-between items-center">
-                <a href="#" className="no-underline py-1">
-                  <h1 className="font-bold text-lg tracking-widest">
-                    JOONA OJA
-                  </h1>
-                </a>
-                <button id="menuBtn" className={open ? 'open hamburger block sm:hidden focus:outline-none' : 'hamburger block sm:hidden focus:outline-none'} type="button" onClick={() => setOpen(!open)}>
-                  <span className="hamburger__top-bun"></span><span className="hamburger__bottom-bun"></span>
-                </button>
-              </div>
-              <div id="menu" className={open ? 'w-full sm:w-auto self-end sm:self-center sm:flex flex-col sm:flex-row items-center h-full py-1 pb-4 sm:py-0 sm:pb-0 flex' : 'w-full sm:w-auto self-end sm:self-center sm:flex flex-col sm:flex-row items-center h-full py-1 pb-4 sm:py-0 sm:pb-0 hidden'}>
-                <a className="text-dark font-bold hover:text-red text-lg w-full no-underline sm:w-auto sm:pr-4 py-2 sm:py-1 sm:pt-2" href="https://ttntm.me/blog/tailwind-responsive-menu/" target="_blank">Portfolio</a>
-                <a className="text-dark font-bold hover:text-red text-lg w-full no-underline sm:w-auto sm:px-4 py-2 sm:py-1 sm:pt-2" href="#bottom">Contact</a>
-              </div>
-            </nav>
-          </header>
+          <NavHeader/>
 
+
+          <div className='relative w-full min-h-screen overflow-auto'>
+            <div className="absolute overflow-auto top-1/4 right-1/4 md:w-1/2 md:h-1/2 w-56 h-56 bg-orange-300 rounded-full mix-blend-lighten filter blur-xl opacity-30 animate-blob"></div>
+            <div className="absolute overflow-auto top-1/4 right-1/2 md:w-1/3 md:h-1/3 w-52 h-52 bg-purple-300 rounded-full mix-blend-hard-light filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
+            <div className="absolute overflow-auto top-1/5 left-1/2 md:w-1/3 md:h-1/3 w-56 h-56 bg-indigo-300 rounded-full mix-blend-lighten filter blur-xl opacity-50 animate-blob animation-delay-4000"></div>
+            <div className="m-8 relative space-y-4">
+            <div className="pt-12 rounded-lg flex items-center justify-between space-x-8">
+              <img className="rounded-full w-1/3 mx-auto bg-stone-900 bg-opacity-70" src="/my-face.png" />
+            </div>
+            <div className="p-5 text-center rounded-lg flex items-center justify-between space-x-8">
+              <h1 className="text-xl font-bold mx-auto text-white">Hello There!</h1>
+            </div>
+            <div className="p-5 bg-stone-800 bg-opacity-80 rounded-lg flex items-center justify-between space-x-8">
+                <p className="text-md font-bold text-white">
+                  I'm a finnish IT-student, interested in front-end development and lorem ipsum dolor sit amet...
+                  In the neon-drenched cyber-jungle, techno-shamans engage in quantum dance battles against glitched cyber-raptors, all while the zero-gravity internet of things dreams of electric sheep.  
+                </p>
+            </div>
+          </div>
+          </div>
 
             <main className="content">
-              <div className="min-h-screen text-center justify-center py-32 px-6 bg-stone-800">
+              {/* <div className="min-h-screen text-center justify-center py-32 px-6 bg-stone-800">
                 <img className="rounded-full w-1/3 mx-auto bg-stone-900" src="/my-face.png" />
                 <h1 className="text-xl font-bold text-white py-10">Hello There!</h1>
-                <p className="text-md font-bold text-white">I'm a finnish IT-student, interested in front-end development and lorem ipsum dolor sit amet...</p>
-              </div>
+                <p className="text-md font-bold text-white">
+                  I'm a finnish IT-student, interested in front-end development and lorem ipsum dolor sit amet...
+                  In the neon-drenched cyber-jungle, techno-shamans engage in quantum dance battles against glitched cyber-raptors, all while the zero-gravity internet of things dreams of electric sheep.  
+                </p>
+              </div> */}
               <div className="flex flex-col w-2/3 mx-auto pt-10 pb-24 tracking-wide">
                 <h2 className="my-3 text-xl text-white mb-10">The Story so far...</h2>
                 <h3 className="my-3 text-lg text-white">Job Experience A</h3>
